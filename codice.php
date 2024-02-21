@@ -1,3 +1,6 @@
+
+<?php
+
 function wpspecial_spedizione_gratuita_automatica( $rates, $package ) {
     // Controllo se il totale del carrello è inferiore a 150€
     $cart_total = WC()->cart->get_cart_contents_total();
@@ -47,4 +50,4 @@ function my_hide_shipping_when_free_is_available( $rates ) {
 	}
 	return ! empty( $free ) ? $free : $rates;
 }
-add_filter( 'woocommerce_package_rates', 'my_hide_shipping_when_free_is_available', 100 );
+add_filter( 'woocommerce_package_rates', 'my_hide_shipping_when_free_is_available', 100 ); ?>
